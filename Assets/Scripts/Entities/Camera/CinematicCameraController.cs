@@ -15,7 +15,7 @@ public class CinematicCameraController : MonoBehaviour
     public float cameraRotationSpeed; //Sped at which the camera rotates at;
 
     [Header("Debug")]
-    private bool canMove; //Can the Camera start moving?
+    public bool canMove; //Can the Camera start moving?
 
     private int currentWaypoint = 0; //Camera's current waypoint;
 
@@ -37,15 +37,19 @@ public class CinematicCameraController : MonoBehaviour
         if (canMove)
         {
             GoToWaypoint();
+            StartRoute();
         }
     }
 
-    void StartRoute() //Initial Logic;
+    public void ButtonCanMove() // if you have a button, this is to start the cinematics!
+    {
+        canMove = true;
+    }
+
+    private void StartRoute() //Initial Logic;
     {
         waypointVector = cameraWaypoints[currentWaypoint].transform.position;
         waypointQuaternion = cameraWaypoints[currentWaypoint].transform.rotation;
-
-        canMove = true;
     }
 
     void FindNextWaypoint() //Finds the Next waypoint in the waypoint list and resets the variable used for the lerp calculations;
@@ -65,7 +69,7 @@ public class CinematicCameraController : MonoBehaviour
         canMove = true;
     }
 
-    void GoToWaypoint() //The actual camera movement/rotation;
+    private void GoToWaypoint() //The actual camera movement/rotation;
     {
         transform.position = Vector3.Lerp(transform.position, waypointVector, t);
         transform.rotation = Quaternion.Lerp(transform.rotation, waypointQuaternion, t);
