@@ -117,10 +117,10 @@ Material:
       second: 0.09839281
     - first:
         name: _Frequency
-      second: 1.3214285
+      second: 1
     - first:
         name: _HeightScale
-      second: 0.53653574
+      second: 0.25
     - first:
         name: _Intence
       second: 381.25
@@ -156,7 +156,7 @@ Material:
       second: 1
     - first:
         name: _WaveSpeed
-      second: 3.2210715
+      second: 2
     m_Colors:
     - first:
         name: _Color
