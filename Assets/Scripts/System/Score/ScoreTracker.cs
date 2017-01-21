@@ -15,7 +15,7 @@ public class ScoreTracker : MonoBehaviour
         blueTeamCurrentScore = 0;
     }
 
-    static void AddPoint(string team)
+    public static void AddPoint(string team)
     {
         switch(team)
         {
@@ -30,7 +30,7 @@ public class ScoreTracker : MonoBehaviour
         }
     }
 
-    static void CheckForWin()
+    public static void CheckForWin()
     {
         if (redTeamCurrentScore >= maxScore)
         {
