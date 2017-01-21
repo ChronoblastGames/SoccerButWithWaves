@@ -58,7 +58,7 @@ public class InputManager : MonoBehaviour
 
             if (Input.GetKeyDown(Interact))
             {
-
+                playerController.CreateWave();
             }
         }
     }

@@ -8,6 +8,7 @@ TagManager:
   - Player2
   - Player3
   - Player4
+  - Ball
   layers:
   - Default
   - TransparentFX
@@ -17,10 +18,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Field
+  - Player
+  - Ball
+  - Walls
   - 
   - 
   - 

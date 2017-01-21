@@ -9,48 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1190186232761514}
+  m_RootGameObject: {fileID: 1453216294516520}
   m_IsPrefabParent: 1
---- !u!1 &1190186232761514
+--- !u!1 &1453216294516520
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4842071232935370}
-  - component: {fileID: 33144428200042630}
-  - component: {fileID: 54383997278451798}
-  - component: {fileID: 65170984011445460}
-  - component: {fileID: 23643002959758148}
-  - component: {fileID: 114086506989251618}
-  - component: {fileID: 114061605225866986}
-  m_Layer: 9
-  m_Name: Player1
-  m_TagString: Player1
+  - component: {fileID: 4857190747342492}
+  - component: {fileID: 33160871178843536}
+  - component: {fileID: 54588319272238216}
+  - component: {fileID: 135544287125311124}
+  - component: {fileID: 23630883888899038}
+  m_Layer: 10
+  m_Name: Ball
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4842071232935370
+--- !u!4 &4857190747342492
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190186232761514}
+  m_GameObject: {fileID: 1453216294516520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23643002959758148
+--- !u!23 &23630883888899038
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190186232761514}
+  m_GameObject: {fileID: 1453216294516520}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0a9d4aa5aff11d34694269c6a6217276, type: 2}
+  - {fileID: 2100000, guid: cd3e6cee302a9cb4fb6737cb87c9f33f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,75 +74,37 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33144428200042630
+--- !u!33 &33160871178843536
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190186232761514}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54383997278451798
+  m_GameObject: {fileID: 1453216294516520}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54588319272238216
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190186232761514}
+  m_GameObject: {fileID: 1453216294516520}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!65 &65170984011445460
-BoxCollider:
+--- !u!135 &135544287125311124
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190186232761514}
+  m_GameObject: {fileID: 1453216294516520}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114061605225866986
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190186232761514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62db0f0c27716b49bf15f5b9b52c108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  currentStamina: 0
-  staminaRegenerationRate: 0
-  staminaCostPerSecond: 0
-  explosionStrength: 10
-  explosionRadius: 10
-  explosionMask:
-    serializedVersion: 2
-    m_Bits: 1536
---- !u!114 &114086506989251618
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190186232761514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9625b067824ea49bb02b8bea50e5ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNumber: 
-  xAxis: 0
-  yAxis: 0
-  Interact: 32
-  Pause: 0
-  canMove: 1
-  canGetInput: 1

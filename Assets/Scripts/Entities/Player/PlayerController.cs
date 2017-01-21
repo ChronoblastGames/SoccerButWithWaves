@@ -20,8 +20,13 @@ public class PlayerController : MonoBehaviour
     public float currentStamina;
     public float staminaRegenerationRate;
     public float staminaCostPerSecond;
-    
-	void Start ()
+
+    [Header("Player Wave Attributes")]
+    public float explosionStrength;
+    public float explosionRadius;
+    public LayerMask explosionMask;
+
+    void Start ()
     {
         PlayerSetup();
 	}
@@ -59,6 +64,23 @@ public class PlayerController : MonoBehaviour
         if (yAxis != 0)
         {
             myRB.AddForce(Vector3.forward * yAxis * moveSpeed * Time.deltaTime, ForceMode.Impulse);
+        }
+    }
+
+    public void CreateWave()
+    {
+        Vector3 explosionVec = transform.position;
+
+        Collider[] explosionDetection = Physics.OverlapSphere(explosionVec, explosionRadius, explosionMask);
+
+        foreach (Collider hit in explosionDetection)
+        {
+            Rigidbody hitRB = hit.gameObject.GetComponent<Rigidbody>();
+
+            if (hitRB != null)
+            {
+                hitRB.AddExplosionForce(explosionStrength, explosionVec, explosionRadius, 0f, ForceMode.Impulse);
+            }
         }
     }
 }
