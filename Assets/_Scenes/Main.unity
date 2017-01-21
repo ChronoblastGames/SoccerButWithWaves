@@ -141,8 +141,8 @@ Camera:
   m_GameObject: {fileID: 141637817}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -173,13 +173,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141637817}
-  m_LocalRotation: {x: 0.6191887, y: -0, z: -0, w: 0.78524226}
+  m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
   m_LocalPosition: {x: 0, y: 25, z: -7.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 76.514, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
 --- !u!114 &141637823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +381,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.902605
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -409,19 +409,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.017034
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.0170355
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.017035
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4994d45317b77b74f9d0d4e1d8934937, type: 2}
+    - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
+      propertyPath: m_Name
+      value: BlueGoalieNet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
@@ -615,8 +631,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4832525424338300, guid: 13fdfa9038b235e478d6ea9046c57214, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 23360267263355022, guid: 13fdfa9038b235e478d6ea9046c57214,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49d878b02ae231c41b96cef2d302ca44, type: 2}
+    - target: {fileID: 23988958570673126, guid: 13fdfa9038b235e478d6ea9046c57214,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49d878b02ae231c41b96cef2d302ca44, type: 2}
+    - target: {fileID: 23219590387435082, guid: 13fdfa9038b235e478d6ea9046c57214,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49d878b02ae231c41b96cef2d302ca44, type: 2}
+    - target: {fileID: 23139478505559252, guid: 13fdfa9038b235e478d6ea9046c57214,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49d878b02ae231c41b96cef2d302ca44, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13fdfa9038b235e478d6ea9046c57214, type: 2}
   m_IsPrefabParent: 0
@@ -772,8 +808,8 @@ Transform:
   m_LocalScale: {x: 1.2947214, y: 1.2947212, z: 1.2947212}
   m_Children:
   - {fileID: 784469939}
-  - {fileID: 852257930}
   - {fileID: 497037630}
+  - {fileID: 852257930}
   - {fileID: 1751023162}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -868,6 +904,88 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e258b7d0f63328c48b55298807e218c0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1385136097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1385136098}
+  - component: {fileID: 1385136099}
+  m_Layer: 0
+  m_Name: RedGoalTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1385136098
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385136097}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.269, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 497037630}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1385136099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385136097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.52, y: 1.3, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1657560410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1657560411}
+  - component: {fileID: 1657560412}
+  m_Layer: 0
+  m_Name: BlueGoalTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1657560411
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657560410}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.269, y: 0, z: 0.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 852257930}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1657560412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657560410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.52, y: 1.3, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1667692656
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +1063,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.219706
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -973,23 +1091,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.017034
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.0170355
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.017035
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
       propertyPath: m_Name
-      value: GoalieNet (1)
+      value: RedGoalieNet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a9d4aa5aff11d34694269c6a6217276, type: 2}
+    - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c161f864ab350f049b85b2dd9078643d, type: 3}
