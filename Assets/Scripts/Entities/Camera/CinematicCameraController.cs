@@ -6,6 +6,7 @@ public class CinematicCameraController : MonoBehaviour
 {
     //@Chronoblast
     //www.chronoblastgames.com
+    public MainMenuInputManager[] mainMenuInput;
 
     [Header("Camera Waypoints")]
     public List<GameObject> cameraWaypoints; //List of Waypoints for the Camera to Follow;
@@ -85,6 +86,9 @@ public class CinematicCameraController : MonoBehaviour
 
     void FinishedRoute() //Once the camera reaches the final point;
     {
-        Debug.Log("Finished Route!");
+        foreach (MainMenuInputManager menuInput in mainMenuInput)
+        {
+            menuInput.canReceiveInput = true;
+        }
     }
 }
