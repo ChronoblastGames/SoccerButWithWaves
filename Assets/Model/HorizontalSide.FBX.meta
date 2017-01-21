@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c7cfea5cb880a48408a3a74659f94278
-timeCreated: 1485007327
+guid: 7211b6c650b7f9c4193bb5faef7ee8de
+timeCreated: 1485023646
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Torus001
+    4300000: Arc001
   materials:
     importMaterials: 1
     materialName: 0
