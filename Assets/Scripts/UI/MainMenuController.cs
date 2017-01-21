@@ -62,10 +62,12 @@ public class MainMenuController : MonoBehaviour
                     player.transform.position = blueTeamArrayPosition[playerNumber].transform.position;
                     numberOfPlayersOnBlueTeam++;
                     totalNumberOfPlayers++;
+                    return;
                 }
-                else if ()
+                else if (isRedTeamSpotTaken[playerNumber])
                 {
-                    Debug.Log("Spot already Taken");
+                    Debug.Log("Blargh");
+                    return;
                 }
                 break;
 
@@ -77,10 +79,12 @@ public class MainMenuController : MonoBehaviour
                     player.transform.position = redTeamArrayPosition[playerNumber].transform.position;
                     numberOfPlayersOnRedTeam++;
                     totalNumberOfPlayers++;
+                    return;
                 }
-                else
+                else if (isBlueTeamSpotTaken[playerNumber])
                 {
-                    Debug.Log("Spot already Taken");
+                    Debug.Log("Blargh");
+                    return;
                 }
                 break;
 

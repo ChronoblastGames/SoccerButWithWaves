@@ -371,6 +371,11 @@ Prefab:
       propertyPath: blueTeamArrayPosition.Array.data[3]
       value: 
       objectReference: {fileID: 1241428186}
+    - target: {fileID: 114329838778585458, guid: 1c8585b5b3d379d468455ddc74a27146,
+        type: 2}
+      propertyPath: redColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a9d4aa5aff11d34694269c6a6217276, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c8585b5b3d379d468455ddc74a27146, type: 2}
   m_IsPrefabParent: 0
