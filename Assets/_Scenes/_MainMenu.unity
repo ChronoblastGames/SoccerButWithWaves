@@ -220,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 342669023}
   m_LocalRotation: {x: -0, y: 0.50762904, z: -0, w: 0.8615758}
-  m_LocalPosition: {x: 0.713, y: 0.277, z: -0.878}
+  m_LocalPosition: {x: -6.29, y: 0.277, z: -0.878}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 522971096}
@@ -503,17 +503,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 522971095}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 34896304}
         m_MethodName: SetActive
         m_Mode: 6
@@ -741,7 +730,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703123281}
   m_LocalRotation: {x: -0.20534196, y: -0.37070477, z: -0.22394034, w: 0.8776465}
-  m_LocalPosition: {x: -0.97, y: 1.13, z: 0.46}
+  m_LocalPosition: {x: -7.97, y: 1.13, z: 0.46}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 522971096}
@@ -823,7 +812,7 @@ Transform:
   m_GameObject: {fileID: 755087740}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 60, y: 60.00003, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 1647979996}
   m_RootOrder: 4
@@ -1037,7 +1026,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840086014}
   m_LocalRotation: {x: -0.049873017, y: 0.059450805, z: -0.10631826, w: 0.9912995}
-  m_LocalPosition: {x: 0, y: 0.48, z: -1.77}
+  m_LocalPosition: {x: -7, y: 0.48, z: -1.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 580682982}
@@ -1056,8 +1045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraWaypoints:
   - {fileID: 1128174763}
-  cameraSpeed: 1
-  cameraRotationSpeed: 1
+  cameraSpeed: 0.8
+  cameraRotationSpeed: 0.8
   canMove: 0
 --- !u!1 &853521527
 GameObject:
@@ -1200,7 +1189,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997470714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0.715, z: 0.55}
+  m_LocalPosition: {x: -7.6, y: 0.715, z: 0.55}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 522971096}
