@@ -41,9 +41,9 @@ public class InputManager : MonoBehaviour
         {
             if (canMove)
             {
-                xAxis = Input.GetAxisRaw("Horizontal");
+                xAxis = Input.GetAxisRaw("Horizontal" + playerNumber);
 
-                yAxis = Input.GetAxisRaw("Vertical");
+                yAxis = Input.GetAxisRaw("Vertical" + playerNumber);
             }
             else
             {

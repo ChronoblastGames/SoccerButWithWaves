@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Stamina Attributes")]
     public float currentStamina;
+    private float maxStamina = 100f;
     public float staminaRegenerationRate;
     public float staminaCostPerSecond;
 
@@ -52,6 +53,18 @@ public class PlayerController : MonoBehaviour
         {
             Move(xAxis, yAxis);
         }
+    }
+
+    void ManageStamina()
+    {
+        if (currentStamina < maxStamina)
+        {
+            currentStamina += staminaRegenerationRate * Time.deltaTime;
+        }
+        else if (currentStamina > maxStamina)
+        {
+            currentStamina = maxStamina;
+        }      
     }
 
     void Move(float xAxis, float yAxis)
