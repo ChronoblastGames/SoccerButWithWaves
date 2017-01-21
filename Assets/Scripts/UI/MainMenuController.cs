@@ -63,7 +63,7 @@ public class MainMenuController : MonoBehaviour
                     numberOfPlayersOnBlueTeam++;
                     totalNumberOfPlayers++;
                 }
-                else
+                else if ()
                 {
                     Debug.Log("Spot already Taken");
                 }
