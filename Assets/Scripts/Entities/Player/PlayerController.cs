@@ -94,6 +94,8 @@ public class PlayerController : MonoBehaviour
             {
                 hitRB.AddExplosionForce(explosionStrength, explosionVec, explosionRadius, 0f, ForceMode.Impulse);
             }
+
+            RippleEffect.instance.EmitAtPosition(explosionVec);
         }
     }
 }

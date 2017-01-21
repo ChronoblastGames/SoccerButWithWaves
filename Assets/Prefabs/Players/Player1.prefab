@@ -161,8 +161,8 @@ MonoBehaviour:
   currentStamina: 0
   staminaRegenerationRate: 0
   staminaCostPerSecond: 0
-  explosionStrength: 10
-  explosionRadius: 10
+  explosionStrength: 25
+  explosionRadius: 5
   explosionMask:
     serializedVersion: 2
     m_Bits: 1536
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2827586, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -308,5 +308,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 2}
+  m_SizeDelta: {x: 1.75, y: 1.75}
   m_Pivot: {x: 0.5, y: 0.5}
