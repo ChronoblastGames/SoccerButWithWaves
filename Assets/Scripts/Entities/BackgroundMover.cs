@@ -1,0 +1,83 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BackgroundMover : MonoBehaviour
+{
+    private Timer timer;
+
+    [Header("Movement Variables")]
+    public float moveSpeed;
+    private float moveDelay;
+    public float moveAmount;
+
+    private Vector3 topPos;
+    private Vector3 bottomPos;
+
+    [Header("Movement Booleans")]
+    public bool startedMoving;
+    public bool isGoingUp = true;
+    public bool isGoingDown;
+
+    void Start()
+    {
+        moveDelay = Random.Range(1, 3);
+
+        timer = new Timer();
+        timer.ResetTimer(moveDelay);
+
+        CalculatePositions();
+    }
+
+    void Update()
+    {
+        Timer();
+
+        if (startedMoving)
+        {
+            Move();
+        }
+    }
+
+    void Move()
+    {
+        if (isGoingUp)
+        {
+            transform.position += new Vector3(0, moveSpeed, 0) * Time.deltaTime;
+        }
+
+        if (isGoingDown)
+        {
+            transform.position += new Vector3(0, -moveSpeed, 0) * Time.deltaTime;
+        }
+
+        if (transform.position.y > topPos.y)
+        {
+            isGoingUp = false;
+            isGoingDown = true;
+        }
+
+        if (transform.position.y < bottomPos.y)
+        {
+            isGoingDown = false;
+            isGoingUp = true;
+        }
+    }
+
+    void CalculatePositions()
+    {
+        topPos = transform.position + new Vector3(0, moveAmount, 0);
+        bottomPos = transform.position - new Vector3(0, moveAmount, 0);
+    }
+
+    void Timer()
+    {
+        if (!startedMoving)
+        {
+            if (timer.TimerIsDone())
+            {
+                startedMoving = true;
+            }
+        }
+    }
+}
