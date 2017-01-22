@@ -12,6 +12,7 @@ TagManager:
   - RedGoalTrigger
   - BlueGoalTrigger
   - ScoreTrack
+  - PlayerHolder
   layers:
   - Default
   - TransparentFX

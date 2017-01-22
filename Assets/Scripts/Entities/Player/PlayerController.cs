@@ -33,10 +33,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Color Attributes")]
     public Color playerColor;
-    public Material redColor;
-    public Material blueColor;
-    public Material yellowColor;
-    public Material greenColor;
 
     void Start ()
     {

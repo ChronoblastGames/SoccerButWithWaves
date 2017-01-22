@@ -7,7 +7,9 @@ public class MainMenuController : MonoBehaviour
     public static MainMenuController mainMenuController;
 
     [Header("Selection Attributes")]
-    public int totalNumberOfPlayers;
+
+    [SerializeField]
+    public List <int> playerOrderList;
     private int playerNumber;
 
     public Material redColor;
@@ -21,14 +23,16 @@ public class MainMenuController : MonoBehaviour
 
     public bool[] isRedTeamSpotTaken;
 
-    public List<GameObject> redTeamList;
+    [SerializeField]
+    public List<int> redTeamList;
 
     [Header("Blue Team Attributes")]
     public GameObject[] blueTeamArrayPosition;
 
     public bool[] isBlueTeamSpotTaken;
 
-    public List<GameObject> blueTeamList;
+    [SerializeField]
+    public List<int> blueTeamList;
 
     void Start()
     {
@@ -129,7 +133,8 @@ public class MainMenuController : MonoBehaviour
                 player.GetComponent<Renderer>().material.color = redColor.color;
                 isRedTeamSpotTaken[playerNumber] = true;
                 isBlueTeamSpotTaken[playerNumber] = false;
-                redTeamList.Add(player);
+                redTeamList.Add(playerNumber);
+                playerOrderList.Insert(playerNumber, playerNumber);
                 break;
 
             case "Blue":
@@ -137,7 +142,8 @@ public class MainMenuController : MonoBehaviour
                 player.GetComponent<Renderer>().material.color = blueColor.color;
                 isBlueTeamSpotTaken[playerNumber] = true;
                 isRedTeamSpotTaken[playerNumber] = false;
-                blueTeamList.Add(player);
+                blueTeamList.Add(playerNumber);
+                playerOrderList.Insert(playerNumber, playerNumber);
                 break;
 
             case "Middle":
@@ -145,8 +151,9 @@ public class MainMenuController : MonoBehaviour
                 player.GetComponent<Renderer>().material.color = greenColor.color;
                 isRedTeamSpotTaken[playerNumber] = false;
                 isBlueTeamSpotTaken[playerNumber] = false;
-                redTeamList.Remove(player);
-                blueTeamList.Remove(player);
+                redTeamList.Remove(playerNumber);
+                blueTeamList.Remove(playerNumber);
+                playerOrderList.Remove(playerNumber);
                 break;
 
             default:
@@ -158,7 +165,7 @@ public class MainMenuController : MonoBehaviour
     {
         if (redTeamList.Count > 0 && blueTeamList.Count > 0)
         {
-            LevelManager.LoadLevel(01);
+            LevelManager.LoadLevel(01);         
         }
     }
 }
