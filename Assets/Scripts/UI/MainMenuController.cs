@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
@@ -16,18 +17,18 @@ public class MainMenuController : MonoBehaviour
     public GameObject[] defaultArrayPosition;
 
     [Header("Red Team Attributes")]
-    public int numberOfPlayersOnRedTeam;
-
     public GameObject[] redTeamArrayPosition;
 
     public bool[] isRedTeamSpotTaken;
 
-    [Header("Blue Team Attributes")]
-    public int numberOfPlayersOnBlueTeam;
+    public List<GameObject> redTeamList;
 
+    [Header("Blue Team Attributes")]
     public GameObject[] blueTeamArrayPosition;
 
     public bool[] isBlueTeamSpotTaken;
+
+    public List<GameObject> blueTeamList;
 
     void Start()
     {
@@ -128,19 +129,26 @@ public class MainMenuController : MonoBehaviour
                 player.GetComponent<Renderer>().material.color = redColor.color;
                 isRedTeamSpotTaken[playerNumber] = true;
                 isBlueTeamSpotTaken[playerNumber] = false;
+                redTeamList.Add(player);
                 break;
+
             case "Blue":
                 player.transform.position = blueTeamArrayPosition[playerNumber].transform.position;
                 player.GetComponent<Renderer>().material.color = blueColor.color;
                 isBlueTeamSpotTaken[playerNumber] = true;
                 isRedTeamSpotTaken[playerNumber] = false;
+                blueTeamList.Add(player);
                 break;
+
             case "Middle":
                 player.transform.position = defaultArrayPosition[playerNumber].transform.position;
                 player.GetComponent<Renderer>().material.color = greenColor.color;
                 isRedTeamSpotTaken[playerNumber] = false;
                 isBlueTeamSpotTaken[playerNumber] = false;
+                redTeamList.Remove(player);
+                blueTeamList.Remove(player);
                 break;
+
             default:
                 Debug.Log("Wrong argument passed through Team Adder, was: " + teamColor);
                 break;
@@ -148,30 +156,9 @@ public class MainMenuController : MonoBehaviour
     }
     public void StartGame()
     {
-        int redTeamCount = 0;
-        int blueTeamCount = 0;
-        
-        foreach (bool isRedPlayerReady in isRedTeamSpotTaken)
+        if (redTeamList.Count > 0 && blueTeamList.Count > 0)
         {
-            if (isRedPlayerReady)
-            {
-                redTeamCount++;
-            }
-        }
-
-        foreach (bool isBluePlayerReady in isBlueTeamSpotTaken)
-        {
-            if (isBluePlayerReady)
-            {
-                blueTeamCount++;
-            }
-        }
-
-        if (redTeamCount > 0 && blueTeamCount > 0)
-        {
-            numberOfPlayersOnRedTeam = redTeamCount;
-            numberOfPlayersOnBlueTeam = blueTeamCount;
-            Debug.Log("Lets Roll");
+            LevelManager.LoadLevel(01);
         }
     }
 }
