@@ -7,6 +7,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private InputManager inputManager;
+	private Timer waveTimer;
+	[SerializeField]
+	private bool canWave;
+	public float waveDelay = 1.25f;
 
     private Rigidbody myRB;
 
@@ -29,12 +33,19 @@ public class PlayerController : MonoBehaviour
 
     void Start ()
     {
+		waveTimer = new Timer ();
+		waveTimer.ResetTimer (0);
         PlayerSetup();
 	}
 	
 	void FixedUpdate ()
     {
         GatherInputs();
+
+		if (waveTimer.TimerIsDone()) {
+			
+			canWave = true;
+		}
 	}
 
     void PlayerSetup()
@@ -82,20 +93,22 @@ public class PlayerController : MonoBehaviour
 
     public void CreateWave()
     {
-        Vector3 explosionVec = transform.position;
+		if (canWave == true) {
+			Vector3 explosionVec = transform.position;
 
-        Collider[] explosionDetection = Physics.OverlapSphere(explosionVec, explosionRadius, explosionMask);
+			Collider[] explosionDetection = Physics.OverlapSphere (explosionVec, explosionRadius, explosionMask);
 
-        foreach (Collider hit in explosionDetection)
-        {
-            Rigidbody hitRB = hit.gameObject.GetComponent<Rigidbody>();
+			foreach (Collider hit in explosionDetection) {
+				Rigidbody hitRB = hit.gameObject.GetComponent<Rigidbody> ();
 
-            if (hitRB != null)
-            {
-                hitRB.AddExplosionForce(explosionStrength, explosionVec, explosionRadius, 0f, ForceMode.Impulse);
-            }
+				if (hitRB != null) {
+					hitRB.AddExplosionForce (explosionStrength, explosionVec, explosionRadius, 0f, ForceMode.Impulse);
+				}
 
-            RippleEffect.instance.EmitAtPosition(explosionVec);
-        }
+				RippleEffect.instance.EmitAtPosition (explosionVec);
+			}
+			waveTimer.ResetTimer (waveDelay);
+			canWave = false;
+		}
     }
 }
