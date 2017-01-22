@@ -210,6 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486054783}
   - component: {fileID: 486054782}
+  - component: {fileID: 486054784}
   m_Layer: 0
   m_Name: XWP3000_title
   m_TagString: Untagged
@@ -265,6 +266,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486054784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 486054781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d04d4c8322b4d49a1dbfcddc6ac16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &561028162 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1630292296623872, guid: 3ddf72350c6a7b642b0e19d6a0d0e140,
