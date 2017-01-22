@@ -138,11 +138,9 @@ public class RippleEffect : MonoBehaviour
         droplets[dropCount++ % droplets.Length].Reset();
     }
 
-	public void EmitAtPosition(Vector3 desiredPos, Material playerColor)
+	public void EmitAtPosition(Vector3 desiredPos)
 	{
         Vector3 screenPos = Camera.main.WorldToScreenPoint(desiredPos);
-
-        reflectionColor = playerColor.color;
 
 		droplets[dropCount++ % droplets.Length].Create(screenPos);
 	}

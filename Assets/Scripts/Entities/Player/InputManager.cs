@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour
     public bool canMove;
     public bool canGetInput;
 
-	void Awake ()
+	void Start ()
     {
         GetPlayerInfo();
 	}
