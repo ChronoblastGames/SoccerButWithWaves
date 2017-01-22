@@ -461,6 +461,26 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 114762192039488520, guid: 3ddf72350c6a7b642b0e19d6a0d0e140,
+        type: 2}
+      propertyPath: STARTGAME_KEYBOARD
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114402333591640894, guid: 3ddf72350c6a7b642b0e19d6a0d0e140,
+        type: 2}
+      propertyPath: STARTGAME_KEYBOARD
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366827106433692, guid: 3ddf72350c6a7b642b0e19d6a0d0e140,
+        type: 2}
+      propertyPath: STARTGAME_KEYBOARD
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131640529282636, guid: 3ddf72350c6a7b642b0e19d6a0d0e140,
+        type: 2}
+      propertyPath: STARTGAME_KEYBOARD
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ddf72350c6a7b642b0e19d6a0d0e140, type: 2}
   m_IsPrefabParent: 0

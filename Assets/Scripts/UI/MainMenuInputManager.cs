@@ -6,6 +6,9 @@ public class MainMenuInputManager : MonoBehaviour
     private MainMenuController mainMenuController;
 
     [Header("Input Attributes")]
+    public KeyCode STARTGAME_KEYBOARD;
+    public KeyCode STARTGAME_CONTROLLER;
+
     public string playerNumber;
 
     public bool canReceiveInput = false;
@@ -45,6 +48,11 @@ public class MainMenuInputManager : MonoBehaviour
                 {
                     mainMenuController.MovePlayerToPosition("Left", gameObject, playerNumber);
                 }
+            }
+
+            if (Input.GetKeyDown(STARTGAME_KEYBOARD) || Input.GetKeyDown(STARTGAME_CONTROLLER))
+            {
+                mainMenuController.StartGame();
             }
         }
     }

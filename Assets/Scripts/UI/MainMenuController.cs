@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
+    public static MainMenuController mainMenuController;
+
     [Header("Selection Attributes")]
     public int totalNumberOfPlayers;
     private int playerNumber;
@@ -26,6 +28,26 @@ public class MainMenuController : MonoBehaviour
     public GameObject[] blueTeamArrayPosition;
 
     public bool[] isBlueTeamSpotTaken;
+
+    void Start()
+    {
+        InstanceManagement();
+    }
+
+    void InstanceManagement()
+    {
+        if (mainMenuController != null && mainMenuController)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        else
+        {
+            mainMenuController = this;
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void MovePlayerToPosition(string direction, GameObject player, string playerTag)
     {
@@ -97,11 +119,6 @@ public class MainMenuController : MonoBehaviour
 
     }
 
-    public void StartGame()
-    {
-
-    }
-
     void PlaceOnTeam(string teamColor, GameObject player, int playerNumber)
     {
         switch(teamColor)
@@ -127,6 +144,34 @@ public class MainMenuController : MonoBehaviour
             default:
                 Debug.Log("Wrong argument passed through Team Adder, was: " + teamColor);
                 break;
+        }
+    }
+        
+    public void StartGame()
+    {
+        int redTeamCount = 0;
+        int blueTeamCount = 0;
+        
+        foreach (bool isRedPlayerReady in isRedTeamSpotTaken)
+        {
+            if (isRedPlayerReady)
+            {
+                redTeamCount++;
+            }
+        }
+
+        foreach (bool isBluePlayerReady in isBlueTeamSpotTaken)
+        {
+            if (isBluePlayerReady)
+            {
+                blueTeamCount++;
+            }
+        }
+
+        if (redTeamCount > 0 && blueTeamCount > 0)
+        {
+            numberOfPlayersOnRedTeam = redTeamCount;
+            numberOfPlayersOnBlueTeam = blueTeamCount;
         }
     }
 }
