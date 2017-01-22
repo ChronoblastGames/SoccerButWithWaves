@@ -39,6 +39,11 @@ public class GameInit : MonoBehaviour
 
         Debug.Log(numberOfPlayers);
 
+        if (numberOfPlayers == 4)
+        {
+
+        }
+
         SpawnPlayers();
     }
 
@@ -53,27 +58,28 @@ public class GameInit : MonoBehaviour
             }
             else if (mainMenuController.blueTeamList.Contains(i))
             {
-                InitiatePlayer(i, "Blue");
-                continue;
+                InitiatePlayer(i, "Blue");              
             }
         }
     }
 
     void InitiatePlayer(int playerNumber, string teamColor)
     {
+        Debug.Log(playerNumber);
+
         switch (teamColor)
         {
             case "Red":
                 GameObject newRedPlayer = Instantiate(playerList[playerNumber], redTeamSpawns[playerNumber].transform.position, redTeamSpawns[playerNumber].transform.rotation, redTeamSpawns[playerNumber].transform);
                 newRedPlayer.GetComponent<Renderer>().material = redColors[numberOfPlayersOnRed];
-                Debug.Log("Spawned player " + playerNumber + "on " + teamColor);
+                Debug.Log("Spawned player " + playerNumber + " on " + teamColor);
                 numberOfPlayersOnRed++;
                 break;
 
             case "Blue":
                 GameObject newBluePlayer = Instantiate(playerList[playerNumber], blueTeamSpawns[playerNumber].transform.position, blueTeamSpawns[playerNumber].transform.rotation, blueTeamSpawns[playerNumber].transform);
                 newBluePlayer.GetComponent<Renderer>().material = blueColors[numberOfPlayersOnBlue];
-                Debug.Log("Spawned player " + playerNumber + "on " + teamColor);
+                Debug.Log("Spawned player " + playerNumber + " on " + teamColor);
                 numberOfPlayersOnBlue++;
                 break;
 

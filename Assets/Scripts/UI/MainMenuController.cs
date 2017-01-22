@@ -134,7 +134,8 @@ public class MainMenuController : MonoBehaviour
                 isRedTeamSpotTaken[playerNumber] = true;
                 isBlueTeamSpotTaken[playerNumber] = false;
                 redTeamList.Add(playerNumber);
-                playerOrderList.Insert(playerNumber, playerNumber);
+                playerOrderList.Add(playerNumber);
+                playerOrderList.Sort();
                 break;
 
             case "Blue":
@@ -143,7 +144,8 @@ public class MainMenuController : MonoBehaviour
                 isBlueTeamSpotTaken[playerNumber] = true;
                 isRedTeamSpotTaken[playerNumber] = false;
                 blueTeamList.Add(playerNumber);
-                playerOrderList.Insert(playerNumber, playerNumber);
+                playerOrderList.Add(playerNumber);
+                playerOrderList.Sort();
                 break;
 
             case "Middle":

@@ -329,6 +329,7 @@ Transform:
   - {fileID: 25894159}
   - {fileID: 1605642263}
   - {fileID: 543131346}
+  - {fileID: 2070616160}
   m_Father: {fileID: 416859938}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1332,6 +1333,7 @@ Transform:
   - {fileID: 1825418700}
   - {fileID: 1305139357}
   - {fileID: 1447878878}
+  - {fileID: 1516604776}
   m_Father: {fileID: 416859938}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1441,6 +1443,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114533229180658504, guid: 5c7836f095a142943b6d87fa3acf65aa,
+        type: 2}
+      propertyPath: redTeamSpawns.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114533229180658504, guid: 5c7836f095a142943b6d87fa3acf65aa,
+        type: 2}
+      propertyPath: blueTeamSpawns.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4522401386286362, guid: 5c7836f095a142943b6d87fa3acf65aa, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1503,6 +1515,16 @@ Prefab:
       propertyPath: blueTeamSpawns.Array.data[2]
       value: 
       objectReference: {fileID: 1447878877}
+    - target: {fileID: 114533229180658504, guid: 5c7836f095a142943b6d87fa3acf65aa,
+        type: 2}
+      propertyPath: redTeamSpawns.Array.data[3]
+      value: 
+      objectReference: {fileID: 2070616159}
+    - target: {fileID: 114533229180658504, guid: 5c7836f095a142943b6d87fa3acf65aa,
+        type: 2}
+      propertyPath: blueTeamSpawns.Array.data[3]
+      value: 
+      objectReference: {fileID: 1516604775}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c7836f095a142943b6d87fa3acf65aa, type: 2}
   m_IsPrefabParent: 0
@@ -1959,22 +1981,22 @@ Prefab:
     - target: {fileID: 224738895842695868, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 70.66667
+      value: 147.33333
       objectReference: {fileID: 0}
     - target: {fileID: 224738895842695868, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -147.5
       objectReference: {fileID: 0}
     - target: {fileID: 224738895842695868, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 141.33334
+      value: 294.66666
       objectReference: {fileID: 0}
     - target: {fileID: 224738895842695868, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 224790566539342272, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
@@ -1989,22 +2011,22 @@ Prefab:
     - target: {fileID: 224790566539342272, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 241.00002
+      value: 471
       objectReference: {fileID: 0}
     - target: {fileID: 224790566539342272, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -147.5
       objectReference: {fileID: 0}
     - target: {fileID: 224790566539342272, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 199.33334
+      value: 352.66666
       objectReference: {fileID: 0}
     - target: {fileID: 224790566539342272, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 224629051833250150, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
@@ -2019,22 +2041,22 @@ Prefab:
     - target: {fileID: 224629051833250150, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 411.33337
+      value: 794.6666
       objectReference: {fileID: 0}
     - target: {fileID: 224629051833250150, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -147.5
       objectReference: {fileID: 0}
     - target: {fileID: 224629051833250150, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 141.33334
+      value: 294.66666
       objectReference: {fileID: 0}
     - target: {fileID: 224629051833250150, guid: f12c148cd79c1514b845d80ebe0de790,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12c148cd79c1514b845d80ebe0de790, type: 2}
@@ -3018,6 +3040,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1516604775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1516604776}
+  m_Layer: 0
+  m_Name: BlueTeamSpawn4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1516604776
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1516604775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1007118514}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1550985535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3866,6 +3916,34 @@ Transform:
   m_PrefabParentObject: {fileID: 4290943770514448, guid: cfb7aa8a71ede44ee9e2e7b37cc8f0fc,
     type: 2}
   m_PrefabInternal: {fileID: 2046009338}
+--- !u!1 &2070616159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2070616160}
+  m_Layer: 0
+  m_Name: RedSpawn4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2070616160
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070616159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 114212719}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2117839259
 GameObject:
   m_ObjectHideFlags: 0
