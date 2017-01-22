@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UIMaster : MonoBehaviour
 {
+    private ScriptThatJustManagesTheTimeThatsIt gameTime;
+
     [Header ("UI Elements")]
 	public Text redTeamScoreUI;
 	public Text blueTeatScoreUI;
@@ -14,6 +16,11 @@ public class UIMaster : MonoBehaviour
 
 	private int timeDisplay;
 
+    void Start()
+    {
+        gameTime = GameObject.FindGameObjectWithTag("GameTime").GetComponent<ScriptThatJustManagesTheTimeThatsIt>();
+    }
+
 	void Update ()
     {
         ManageTimeUI();
@@ -22,7 +29,7 @@ public class UIMaster : MonoBehaviour
 
     void ManageTimeUI()
     {
-        timeDisplay = scriptThatDoesTimerGO.GetComponent<ScriptThatJustManagesTheTimeThatsIt>().timeLeft;
+        timeDisplay = gameTime.timeLeft;
         string minutes = Mathf.Floor(timeDisplay / 60).ToString("00");
         string seconds = (timeDisplay % 60).ToString("00");
         timeDisplayUI.text = (minutes + ":" + seconds);
