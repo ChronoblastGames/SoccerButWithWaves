@@ -31,6 +31,8 @@ public class CinematicCameraController : MonoBehaviour
         currentWaypoint = 0;
 
         StartRoute();
+
+        
     }
 
     private void Update() //Try and Lerp to the next position every frame;
@@ -67,7 +69,7 @@ public class CinematicCameraController : MonoBehaviour
         waypointVector = cameraWaypoints[currentWaypoint].transform.position;
         waypointQuaternion = cameraWaypoints[currentWaypoint].transform.rotation;
 
-        canMove = true;
+        canMove = false;
     }
 
     private void GoToWaypoint() //The actual camera movement/rotation;
