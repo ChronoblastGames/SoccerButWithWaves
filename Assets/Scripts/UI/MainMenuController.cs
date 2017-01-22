@@ -55,35 +55,37 @@ public class MainMenuController : MonoBehaviour
         switch (direction)
         {
             case "Left":
-                if (!isBlueTeamSpotTaken[playerNumber])
+                if (isRedTeamSpotTaken[playerNumber])
                 {
-                    isBlueTeamSpotTaken[playerNumber] = true;
-                    player.GetComponent<Renderer>().material = blueColor;
-                    player.transform.position = blueTeamArrayPosition[playerNumber].transform.position;
-                    numberOfPlayersOnBlueTeam++;
-                    totalNumberOfPlayers++;
+                    PlaceOnTeam("Middle", player, playerNumber);
+                    return;
+                }
+                else if (!isBlueTeamSpotTaken[playerNumber])
+                {
+                    PlaceOnTeam("Blue", player, playerNumber);
                     return;
                 }
                 else if (isRedTeamSpotTaken[playerNumber])
                 {
-                    Debug.Log("Blargh");
+                    PlaceOnTeam("Middle", player, playerNumber);
                     return;
                 }
                 break;
 
             case "Right":
-                if (!isRedTeamSpotTaken[playerNumber])
+                if (isBlueTeamSpotTaken[playerNumber])
                 {
-                    isRedTeamSpotTaken[playerNumber] = true;
-                    player.GetComponent<Renderer>().material = redColor;
-                    player.transform.position = redTeamArrayPosition[playerNumber].transform.position;
-                    numberOfPlayersOnRedTeam++;
-                    totalNumberOfPlayers++;
+                    PlaceOnTeam("Middle", player, playerNumber);
+                    return;
+                }
+                else if (!isRedTeamSpotTaken[playerNumber])
+                {
+                    PlaceOnTeam("Red", player, playerNumber);
                     return;
                 }
                 else if (isBlueTeamSpotTaken[playerNumber])
                 {
-                    Debug.Log("Blargh");
+                    PlaceOnTeam("Middle", player, playerNumber);
                     return;
                 }
                 break;
@@ -98,5 +100,33 @@ public class MainMenuController : MonoBehaviour
     public void StartGame()
     {
 
+    }
+
+    void PlaceOnTeam(string teamColor, GameObject player, int playerNumber)
+    {
+        switch(teamColor)
+        {
+            case "Red":
+                player.transform.position = redTeamArrayPosition[playerNumber].transform.position;
+                player.GetComponent<Renderer>().material.color = redColor.color;
+                isRedTeamSpotTaken[playerNumber] = true;
+                isBlueTeamSpotTaken[playerNumber] = false;
+                break;
+            case "Blue":
+                player.transform.position = blueTeamArrayPosition[playerNumber].transform.position;
+                player.GetComponent<Renderer>().material.color = blueColor.color;
+                isBlueTeamSpotTaken[playerNumber] = true;
+                isRedTeamSpotTaken[playerNumber] = false;
+                break;
+            case "Middle":
+                player.transform.position = defaultArrayPosition[playerNumber].transform.position;
+                player.GetComponent<Renderer>().material.color = greenColor.color;
+                isRedTeamSpotTaken[playerNumber] = false;
+                isBlueTeamSpotTaken[playerNumber] = false;
+                break;
+            default:
+                Debug.Log("Wrong argument passed through Team Adder, was: " + teamColor);
+                break;
+        }
     }
 }

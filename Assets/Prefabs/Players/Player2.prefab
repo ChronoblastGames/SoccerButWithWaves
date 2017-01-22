@@ -160,7 +160,7 @@ MonoBehaviour:
   playerNumber: 
   xAxis: 0
   yAxis: 0
-  Interact: 32
+  Interact: 305
   Pause: 0
   canMove: 1
   canGetInput: 1
@@ -248,6 +248,11 @@ MonoBehaviour:
   explosionMask:
     serializedVersion: 2
     m_Bits: 1536
+  playerColor: {fileID: 0}
+  redColor: {fileID: 2100000, guid: 0a9d4aa5aff11d34694269c6a6217276, type: 2}
+  blueColor: {fileID: 2100000, guid: 4994d45317b77b74f9d0d4e1d8934937, type: 2}
+  yellowColor: {fileID: 2100000, guid: 922a8e16df3b1be40b0b1876697a93e1, type: 2}
+  greenColor: {fileID: 2100000, guid: cd3e6cee302a9cb4fb6737cb87c9f33f, type: 2}
 --- !u!222 &222472741556769362
 CanvasRenderer:
   m_ObjectHideFlags: 1

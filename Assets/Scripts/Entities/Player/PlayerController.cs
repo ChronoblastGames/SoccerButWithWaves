@@ -27,6 +27,13 @@ public class PlayerController : MonoBehaviour
     public float explosionRadius;
     public LayerMask explosionMask;
 
+    [Header("Player Color Attributes")]
+    public Material playerColor;
+    public Material redColor;
+    public Material blueColor;
+    public Material yellowColor;
+    public Material greenColor;
+
     void Start ()
     {
         PlayerSetup();
@@ -42,6 +49,25 @@ public class PlayerController : MonoBehaviour
         myRB = GetComponent<Rigidbody>();
 
         inputManager = GetComponent<InputManager>();
+
+        switch(inputManager.playerNumber)
+        {
+            case "Player1":
+                playerColor = redColor;
+                break;
+            case "Player2":
+                playerColor = blueColor;
+                break;
+            case "Player3":
+                playerColor = yellowColor;
+                break;
+            case "Player4":
+                playerColor = greenColor;
+                break;
+            default:
+                Debug.Log("Something wrong passed through the Color Setter, was: " + inputManager.playerNumber);
+                break;
+        }
     }
 
     void GatherInputs()
@@ -95,7 +121,7 @@ public class PlayerController : MonoBehaviour
                 hitRB.AddExplosionForce(explosionStrength, explosionVec, explosionRadius, 0f, ForceMode.Impulse);
             }
 
-            RippleEffect.instance.EmitAtPosition(explosionVec);
+            RippleEffect.instance.EmitAtPosition(explosionVec, playerColor);
         }
     }
 }

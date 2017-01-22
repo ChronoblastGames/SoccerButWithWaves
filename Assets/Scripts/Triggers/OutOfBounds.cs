@@ -13,6 +13,7 @@ public class OutOfBounds : MonoBehaviour
 
                 Debug.Log("Ball fell Out Of Bounds, Reseting Ball to Origin");
                 break;
+
             default:
                 Debug.Log("Something unlisted passed through the OutOfBounds Trigger, was " + other.gameObject.name);
                 break;
