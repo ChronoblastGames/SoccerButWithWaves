@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class ScoreTracker : MonoBehaviour
 {
-    private GameMessageManager gameMessageManager;
-
     [Header("Score Attributes")]
     public static int redTeamCurrentScore;
     public static int blueTeamCurrentScore;
@@ -16,8 +14,6 @@ public class ScoreTracker : MonoBehaviour
     void Start()
     {
         ball = GameObject.FindGameObjectWithTag("Ball");
-
-        gameMessageManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameMessageManager>();
     }
 
     static void ResetScore()
