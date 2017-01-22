@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     public float yAxis;
 
     public KeyCode Interact;
+    public KeyCode INTERACT_CONTROLLER;
     public KeyCode Pause;
 
     public bool canMove;
@@ -41,14 +42,9 @@ public class InputManager : MonoBehaviour
         {
             if (canMove)
             {
-                xAxis = Input.GetAxisRaw("Horizontal" + playerNumber);
+                xAxis = Input.GetAxis("Horizontal" + playerNumber);
 
-                yAxis = Input.GetAxisRaw("Vertical" + playerNumber);
-            }
-            else
-            {
-                xAxis = 0;
-                yAxis = 0;
+                yAxis = Input.GetAxis("Vertical" + playerNumber);
             }
 
             if (Input.GetKeyDown(Pause))
@@ -56,7 +52,7 @@ public class InputManager : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(Interact))
+            if (Input.GetKeyDown(Interact) || Input.GetKeyDown(INTERACT_CONTROLLER))
             {
                 playerController.CreateWave();
             }

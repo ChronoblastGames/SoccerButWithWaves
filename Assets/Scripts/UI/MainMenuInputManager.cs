@@ -40,11 +40,11 @@ public class MainMenuInputManager : MonoBehaviour
 
             if (xAxis != 0)
             {
-                if (xAxis > 0)
+                if (xAxis > 0.10)
                 {
                     mainMenuController.MovePlayerToPosition("Right", gameObject, playerNumber);
                 }
-                else if (xAxis < 0)
+                else if (xAxis < -0.10)
                 {
                     mainMenuController.MovePlayerToPosition("Left", gameObject, playerNumber);
                 }

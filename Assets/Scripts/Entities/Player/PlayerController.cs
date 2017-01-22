@@ -83,12 +83,12 @@ public class PlayerController : MonoBehaviour
 
     void Move(float xAxis, float yAxis)
     {
-        if (xAxis != 0)
+        if (xAxis > 0.4 || xAxis < -0.4)
         {
             myRB.AddForce(Vector3.right * xAxis * moveSpeed * Time.deltaTime, ForceMode.Impulse);
         }
 
-        if (yAxis != 0)
+        if (yAxis > 0.4 || yAxis < -0.4)
         {
             myRB.AddForce(Vector3.forward * yAxis * moveSpeed * Time.deltaTime, ForceMode.Impulse);
         }
