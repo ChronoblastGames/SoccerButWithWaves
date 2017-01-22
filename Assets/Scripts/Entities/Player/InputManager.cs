@@ -52,7 +52,7 @@ public class InputManager : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(Interact) || Input.GetKeyDown(INTERACT_CONTROLLER))
+            if (Input.GetKeyDown(Interact) || Input.GetButtonDown("Fire"+playerNumber))
             {
                 playerController.CreateWave();
             }

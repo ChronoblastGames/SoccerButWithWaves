@@ -10,6 +10,10 @@ public class UIMaster : MonoBehaviour
 	public Text redTeamScoreUI;
 	public Text blueTeatScoreUI;
 	public Text timeDisplayUI;
+    public Text winText;
+
+    public string redWinText;
+    public string blueWinText;
 
 	[Header ("Find The Timer")]
 	public GameObject scriptThatDoesTimerGO;
@@ -39,5 +43,20 @@ public class UIMaster : MonoBehaviour
     {
         redTeamScoreUI.text = ScoreTracker.redTeamCurrentScore.ToString();
         blueTeatScoreUI.text = ScoreTracker.blueTeamCurrentScore.ToString();
+    }
+
+    public void DisplayWin(string winTeam)
+    {
+        switch(winTeam)
+        {
+            case "Red":
+                winText.enabled = true;
+                winText.text = redWinText;
+                break;
+            case "Blue":
+                winText.enabled = true;
+                winText.text = blueWinText;
+                break;
+        }
     }
 }

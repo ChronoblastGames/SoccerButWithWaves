@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ScoreTracker : MonoBehaviour
 {
+    private GameMessageManager gameMessageManager;
+
     [Header("Score Attributes")]
     public static int redTeamCurrentScore;
     public static int blueTeamCurrentScore;
@@ -14,6 +16,8 @@ public class ScoreTracker : MonoBehaviour
     void Start()
     {
         ball = GameObject.FindGameObjectWithTag("Ball");
+
+        gameMessageManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<GameMessageManager>();
     }
 
     static void ResetScore()
@@ -50,7 +54,7 @@ public class ScoreTracker : MonoBehaviour
     {
         if (redTeamCurrentScore >= maxScore)
         {
-            Debug.Log("Red Team Wins!");
+              
         }
         else if (blueTeamCurrentScore >= maxScore)
         {

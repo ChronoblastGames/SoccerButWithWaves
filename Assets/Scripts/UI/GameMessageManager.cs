@@ -7,34 +7,18 @@ public class GameMessageManager : MonoBehaviour {
 
 	//SendToEndGameMenu;
 	public Text textToDisplay;
-	public string redTeamWins;
-	public string blueTeamWins;
-	public string drawText;
+	public static string redTeamWins;
+	public static string blueTeamWins;
+	public static string drawText;
 
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-	void DisplayMessage(string messageToSend){
-		switch(messageToSend){
-		case "RedWin":
-			textToDisplay.text = redTeamWins;
-			break;
-		case "BlueWin":
-			textToDisplay.text = blueTeamWins;
-			break;
-		case "Draw":
-			textToDisplay.text = drawText;
-			break;
-		default:
-			break;
-		}
+    // Update is called once per frame
+    void Update()
+    {
 
-	}
+    }
 }
