@@ -31,6 +31,13 @@ public class PlayerController : MonoBehaviour
     public float explosionRadius;
     public LayerMask explosionMask;
 
+    [Header("Player Color Attributes")]
+    public Color playerColor;
+    public Material redColor;
+    public Material blueColor;
+    public Material yellowColor;
+    public Material greenColor;
+
     void Start ()
     {
 		waveTimer = new Timer ();

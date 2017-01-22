@@ -38,9 +38,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4557714645055210}
   - component: {fileID: 65452022569489622}
+  - component: {fileID: 114899398645944288}
   m_Layer: 0
   m_Name: RedGoalTrigger
-  m_TagString: Untagged
+  m_TagString: RedGoalTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,8 +89,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859967980200182}
   m_LocalRotation: {x: -0.6615887, y: 0.6615887, z: -0.24960048, w: -0.24960048}
-  m_LocalPosition: {x: -0.15189886, y: -1.2126163, z: 0.22987175}
-  m_LocalScale: {x: 0.69798386, y: 0.25745574, z: 0.09762539}
+  m_LocalPosition: {x: -0.15189886, y: -1.171, z: 0.327}
+  m_LocalScale: {x: 0.86, y: 0.69, z: 0.09762539}
   m_Children: []
   m_Father: {fileID: 4290943770514448}
   m_RootOrder: 1
@@ -101,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1353114171470386}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -14.75, y: 0, z: 0}
+  m_LocalPosition: {x: -14.77, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4557714645055210}
@@ -130,8 +131,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1050875195706312}
   m_LocalRotation: {x: 0.24959803, y: -0.24959803, z: 0.6615896, w: 0.6615896}
-  m_LocalPosition: {x: -0.15189886, y: 1.2151909, z: 0.22987184}
-  m_LocalScale: {x: 0.6979836, y: 0.2574557, z: 0.09762535}
+  m_LocalPosition: {x: -0.15189886, y: 1.207, z: 0.306}
+  m_LocalScale: {x: 0.89, y: -0.58, z: 0.09762535}
   m_Children: []
   m_Father: {fileID: 4290943770514448}
   m_RootOrder: 2
@@ -299,8 +300,21 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1179697338469794}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.52, y: 1.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114899398645944288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179697338469794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33880ff8abf000447ada0fb672774505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRedGoal: 1
+  isBlueGoal: 0
