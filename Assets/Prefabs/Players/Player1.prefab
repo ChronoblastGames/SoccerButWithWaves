@@ -169,10 +169,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   playerColor: {r: 1, g: 1, b: 1, a: 0}
-  redColor: {fileID: 2100000, guid: 0a9d4aa5aff11d34694269c6a6217276, type: 2}
-  blueColor: {fileID: 2100000, guid: 4994d45317b77b74f9d0d4e1d8934937, type: 2}
-  yellowColor: {fileID: 2100000, guid: cd3e6cee302a9cb4fb6737cb87c9f33f, type: 2}
-  greenColor: {fileID: 2100000, guid: a666572a1ce99bf4d9e9b9bf5abe1352, type: 2}
 --- !u!114 &114086506989251618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +184,7 @@ MonoBehaviour:
   xAxis: 0
   yAxis: 0
   Interact: 32
+  INTERACT_CONTROLLER: 330
   Pause: 0
   canMove: 1
   canGetInput: 1
