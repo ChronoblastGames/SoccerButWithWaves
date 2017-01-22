@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
         myRB = GetComponent<Rigidbody>();
 
         inputManager = GetComponent<InputManager>();
+
+        playerColor = GetComponent<Material>().color;
     }
 
     void GatherInputs()
@@ -108,7 +110,7 @@ public class PlayerController : MonoBehaviour
 					hitRB.AddExplosionForce (explosionStrength, explosionVec, explosionRadius, 0f, ForceMode.Impulse);
 				}
 
-				RippleEffect.instance.EmitAtPosition (explosionVec);
+				RippleEffect.instance.EmitAtPosition (explosionVec, playerColor);
 			}
 			waveTimer.ResetTimer (waveDelay);
 			canWave = false;
