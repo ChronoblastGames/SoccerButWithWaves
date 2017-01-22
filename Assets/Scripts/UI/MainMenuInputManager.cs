@@ -36,15 +36,15 @@ public class MainMenuInputManager : MonoBehaviour
     {
         if (canReceiveInput)
         {
-            xAxis = Input.GetAxisRaw("Horizontal" + playerNumber);
+            xAxis = Input.GetAxis("Horizontal" + playerNumber);
 
             if (xAxis != 0)
             {
-                if (xAxis > 0.10)
+                if (xAxis > 0.5)
                 {
                     mainMenuController.MovePlayerToPosition("Right", gameObject, playerNumber);
                 }
-                else if (xAxis < -0.10)
+                else if (xAxis < -0.5)
                 {
                     mainMenuController.MovePlayerToPosition("Left", gameObject, playerNumber);
                 }
