@@ -77,37 +77,35 @@ public class MainMenuController : MonoBehaviour
         switch (direction)
         {
             case "Left":
-                if (isRedTeamSpotTaken[playerNumber])
+                if (!isBlueTeamSpotTaken[playerNumber])
                 {
-                    PlaceOnTeam("Middle", player, playerNumber);
-                    return;
-                }
-                else if (!isBlueTeamSpotTaken[playerNumber])
-                {
-                    PlaceOnTeam("Blue", player, playerNumber);
+                    isBlueTeamSpotTaken[playerNumber] = true;
+                    player.GetComponent<Renderer>().material = blueColor;
+                    player.transform.position = blueTeamArrayPosition[playerNumber].transform.position;
+                    numberOfPlayersOnBlueTeam++;
+                    totalNumberOfPlayers++;
                     return;
                 }
                 else if (isRedTeamSpotTaken[playerNumber])
                 {
-                    PlaceOnTeam("Middle", player, playerNumber);
+                    Debug.Log("Blargh");
                     return;
                 }
                 break;
 
             case "Right":
-                if (isBlueTeamSpotTaken[playerNumber])
+                if (!isRedTeamSpotTaken[playerNumber])
                 {
-                    PlaceOnTeam("Middle", player, playerNumber);
-                    return;
-                }
-                else if (!isRedTeamSpotTaken[playerNumber])
-                {
-                    PlaceOnTeam("Red", player, playerNumber);
+                    isRedTeamSpotTaken[playerNumber] = true;
+                    player.GetComponent<Renderer>().material = redColor;
+                    player.transform.position = redTeamArrayPosition[playerNumber].transform.position;
+                    numberOfPlayersOnRedTeam++;
+                    totalNumberOfPlayers++;
                     return;
                 }
                 else if (isBlueTeamSpotTaken[playerNumber])
                 {
-                    PlaceOnTeam("Middle", player, playerNumber);
+                    Debug.Log("Blargh");
                     return;
                 }
                 break;
